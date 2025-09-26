@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">QuickBite</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Restaurants</a>
+            <a href="#">My Orders</a>
+            <button class="cta-button">Sign In</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hungry? We Deliver! 🍔🛵</h1>
+            <p>Order food from your favorite local restaurants right to your door.</p>
+            <form class="search-form">
+                <input type="text" placeholder="Enter your delivery address">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="menu-listing">
+        <h2>Popular Dishes Near You</h2>
+        <div class="dishes-container">
+
+            <div class="dish-card">
+                <div class="dish-image"></div>
+                <h3>Classic Burger</h3>
+                <p>Juicy beef patty with fresh toppings.</p>
+                <span class="price">$12.99</span>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image"></div>
+                <h3>Spicy Pizza</h3>
+                <p>Pepperoni, jalapeños, and extra cheese.</p>
+                <span class="price">$15.50</span>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image"></div>
+                <h3>Vegan Salad</h3>
+                <p>Fresh greens, avocado, and vinaigrette.</p>
+                <span class="price">$9.75</span>
+                <button>Add to Cart</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 QuickBite Delivery. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+/* --- Global Styles & Reset --- */
+:root {
+    --primary-color: #ff5722; /* Orange-Red for branding */
+    --secondary-color: #333;
+    --background-light: #f4f4f4;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: white;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+    padding: 12px 15px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    font-size: 1em;
+}
+
+.search-form button {
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* --- Menu Listing Section --- */
+.menu-listing {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.menu-listing h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.dishes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dish-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-image {
+    width: 100%;
+    height: 150px;
+    background-color: #eee; /* Placeholder for an image */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.dish-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.dish-card .price {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.dish-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.dish-card button:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
